@@ -1,16 +1,57 @@
-<center><h1>{{title}}</h1>
-<p>Welcome to {{title}}</p></center>
-<center><form action="/" method="post">
-	<h1><label>AC</label><br></h1>
-		<button type="submit" class="button button3" name="ac" value="OFF">Off</button>
-		<button type="submit" class="button button1" name="ac" value="ON">On</button>
-	<h1><label>FAN</label><br></h1>
-		<button type="submit" class="button button3" name="fan" value="OFF">Off</button>
-		<button type="submit" class="button button1" name="fan" value="ON">On</button>	
-	<h1><label>BULB</label><br></h1>
-		<button type="submit" class="button button3" name="bulb" value="OFF">Off</button>
-		<button type="submit" class="button button1" name="bulb" value="ON">On</button>	
-	<h1><label>COOLER</label><br></h1>
-		<button type="submit" class="button button3" name="cooler" value="OFF">Off</button>
-		<button type="submit" class="button button1" name="cooler" value="ON">On</button>	
-</form></center>
+<center>
+	<h3>Welcome to {{title}}</h3>
+</center>
+<br>
+<center>
+	<form action="/" method="post">
+		<div class="row">
+			<div class="col-lg-8">
+				<h1>
+					<label class="device-name">Air-conditioner</label><span><div class="status statusAC"></div></span>
+				</h1>
+			</div>
+			<div class="col-lg-4">
+				<button type="submit" class="button button3" name="ac" value="OFF">Off</button>
+				<button type="submit" class="button button1" name="ac" value="ON">On</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-8">
+				<h1>
+					<label class="device-name">Fan</label><span><div class="status statusFan"></div></span>
+				</h1>
+			</div>
+			<div class="col-lg-4">
+				<button type="submit" class="button button3" name="fan" value="OFF">Off</button>
+				<button type="submit" class="button button1" name="fan" value="ON">On</button>	
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-8">
+				<h1>
+					<label class="device-name">Bulb</label><span><div class="status statusBulb"></div></span>
+				</h1>
+			</div>
+			<div class="col-lg-4">
+				<button type="submit" class="button button3" name="bulb" value="OFF">Off</button>
+				<button type="submit" class="button button1" name="bulb" value="ON">On</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-8">
+				<h1>
+					<label class="device-name">Cooler</label><span><div class="status statusCooler"></div></span>
+				</h1>
+			</div>
+			<div class="col-lg-4">
+				<button type="submit" class="button button3" name="cooler" value="OFF">Off</button>
+				<button type="submit" class="button button1" name="cooler" value="ON">On</button>
+			</div>
+		</div>
+	</form>
+</center>
+{{!-- <script>
+	function change(this){
+		
+	}
+</script> --}}

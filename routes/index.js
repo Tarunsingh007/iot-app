@@ -5,12 +5,15 @@ var request=require('request');
 
 router.get('/', function(req, res, next) {
 	request(`https://homedeepak.000webhostapp.com/getstatus.php`,(error,response,body)=>{
-		var Body=JSON.parse(body);
-		if(error)
-			console.log(error);
-		console.log(Body);
+		try{
+			var Body=JSON.parse(body);
+			console.log(Body);
+		}
+		catch(e){
+			console.log("Some error occured. Please check if the link is active or not.")
+		}
 	});
-  res.render('index', { title: 'Home Automation App' });
+	res.render('index', { title: 'Home Automation App' });
 });
 
 
@@ -52,9 +55,12 @@ router.post('/', function(req, res, next) {
 			var status='ON';	
 	}	
 	request(`http://homedeepak.000webhostapp.com/updatestatus.php?id=${id}&status=${status}`,(error,response,body)=>{
-		if(error)
-			console.log(error);
- 	res.render('index', { title: 'Express'});
+		try{
+			res.render('index', { title: 'Express'});
+		}
+		catch(e){
+			console.log("Some error occured. Please check if the link is active or not.")
+		}
 	});
  });
 
